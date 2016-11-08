@@ -13,5 +13,15 @@ from having to import both `app.internals` _and_ `logging` in other modules.
 
 ```bash
 # To see how app.internals works
-python logger.demo.py
+python src/logger.demo.py
+```
+
+## Tornado issue
+
+Why doesn't logging work? As soon as `IOLoop.current().start()` is called
+the log records seem to disappear into the void.
+
+```bash
+# I'm supposed to be notified that the Tornado party has started, but...
+python src/tornado.demo.py
 ```
