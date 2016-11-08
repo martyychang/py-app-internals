@@ -16,12 +16,16 @@ from having to import both `app.internals` _and_ `logging` in other modules.
 python src/logger.demo.py
 ```
 
-## Tornado issue
+## Tornado demo
 
-Why doesn't logging work? As soon as `IOLoop.current().start()` is called
-the log records seem to disappear into the void.
+Tornado is a web framework which can be used to build an API, with
+support for `logging` all around.
 
 ```bash
-# I'm supposed to be notified that the Tornado party has started, but...
+# You'll be notified that the Tornado party is about to start...
 python src/tornado.demo.py
+
+# In a separate session or client, make a request to Tornado to see more
+# loggers in action.
+curl http://localhost:8888
 ```
