@@ -13,5 +13,19 @@ from having to import both `app.internals` _and_ `logging` in other modules.
 
 ```bash
 # To see how app.internals works
-python logger.demo.py
+python src/logger.demo.py
+```
+
+## Tornado demo
+
+Tornado is a web framework which can be used to build an API, with
+support for `logging` all around.
+
+```bash
+# You'll be notified that the Tornado party is about to start...
+python src/tornado.demo.py
+
+# In a separate session or client, make a request to Tornado to see more
+# loggers in action.
+curl http://localhost:8888
 ```
